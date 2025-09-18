@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  height: 30%;
+  display: block;
+}
+body {
+  background-color: #000000;
+}
+input {
+  background-color: #3d3d3d;
+  color: white;
+  padding: 1.5px;
+  border-color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.delete-btn {
+  background-color: #3d3d3d;
+  border: none;
+  cursor: pointer;
+}
+header {
+  height: 50px;
+  text-align: center;
+  background-color: #000000;
+  display: flex;
+  border-bottom: 1px solid #ff9080;
+  margin: 20px;
+}
+.overskrift {
+  padding-top: 10px;
+  color: #ff9080;
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#todo_container,
+#done_container {
+  border: 0.5px solid white;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 5px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.to_do_child {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+  height: 300px;
+  color: #ff9080;
+  border-radius: 10px;
+}
+
+.done_child {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+  height: 300px;
+  color: #ff9080;
+  border-radius: 10px;
+}
+.input_button {
+  margin: 12px;
+  padding: 10px;
+  background-color: #3d3d3d;
+  border-radius: 10px;
+}
+
+#containere {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ff9080;
+  padding: 5px;
+  margin: 10px;
+  background-color: #3d3d3d;
+  border-radius: 15px;
+}
+
+#containere h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+}
+
+#submit {
+  cursor: pointer;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  color: white;
+}
+
+li h3 {
+  margin: 0;
+  margin-left: 5px;
+  flex: none;
+}
+
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todo-left input {
+  cursor: pointer;
+}
+
+.todo-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#submit {
+  background-color: #3d3d3d;
+  color: white;
+  font-family: "Lato", sans-serif;
+  padding: 2px;
+  font-size: 15px;
+}
+
+@media (min-width: 800px) {
+  #containere {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .to_do_child {
+    height: 600px;
+  }
+
+  .done_child {
+    height: 600px;
+  }
+  #containere {
+    font-size: 26px;
+  }
+  header {
+    font-size: 32px;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+
+  #todo_container,
+  #done_container {
+    font-size: 24px;
+  }
+  input {
+    font-size: 16px;
+  }
+}

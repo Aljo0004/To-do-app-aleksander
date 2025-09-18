@@ -10,6 +10,8 @@ submit.addEventListener("click", subMitTodo);
 //Tilføjer to do punkt
 function subMitTodo() {
   const li = document.createElement("li");
+  li.id = crypto.randomUUID();
+  console.log("Nyt todo id:", li.id);
   li.innerHTML = `
   <div class="todo-left">
     <input type="checkbox">
@@ -29,7 +31,6 @@ function subMitTodo() {
     li.remove();
   });
 
-  // Skift mellem To do og done
   li.addEventListener("click", (e) => {
     if (e.target.type === "checkbox") {
       if (li.parentElement.id === "todo_container") {
@@ -41,4 +42,9 @@ function subMitTodo() {
       }
     }
   });
+}
+function saveHTML() {
+  // gem nuværende HTML i localStorage
+  localStorage.setItem("todoHTML", todoContainer.innerHTML);
+  localStorage.setItem("doneHTML", doneContainer.innerHTML);
 }
